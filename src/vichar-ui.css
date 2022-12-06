@@ -1,0 +1,235 @@
+:root {
+    --bg-color: 255, 255, 255;
+    --color: 0, 0, 0;
+    --container-padding: 1rem;
+    --border-color: 163, 163, 163;
+    --primary-color: 0, 0, 0;
+    --on-primary-color: 255, 255, 255;
+    --secondary-color: 237, 237, 237;
+    --on-secondary-color: 0, 0, 0;
+    --error-color: 255, 0, 0;
+    --on-error-color: 255, 255, 255;
+}
+
+html {
+    box-sizing: inherit;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(var(--bg-color));
+    color: rgb(var(--color));
+    font-family: sans-serif;
+}
+
+svg:not([fill]) {
+	fill: currentColor;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+input, textarea {
+    font-family: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: .1em;
+}
+
+h1 {
+    font-size: 3.4rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 2.6rem;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+h5 {
+    font-size: 1.8rem;
+    font-weight: 200;
+}
+
+h6 {
+    font-size: 1.4rem;
+    font-weight: 100;
+}
+
+/* @Input and Textarea */
+
+.input, .textarea, .select {
+    background-color: var(--bg-color);
+    padding: .8rem;
+    border: 1px solid rgb(var(--border-color));
+    border-radius: .25rem;
+    outline: none;
+    vertical-align: top;
+    appearance: none;
+    margin-bottom: .25rem;
+    line-height: 1;
+}
+
+.input:focus, .textarea:focus, .select:focus {
+    border-color: rgb(var(--primary-color));
+}
+
+.input {
+    height: 2.5rem;
+}
+
+.input.is-large {
+    height: 3rem;
+}
+
+.select {
+    padding: 0 1rem;
+    height: 2.5rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414z'/%3E%3C/svg%3E");
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+
+.select option:checked {
+    background-color: rgb(var(--primary-color));
+    color: rgb(var(--on-primary-color));
+}
+
+.select option:hover {
+    background-color: rgb(var(--secondary-color));
+}
+
+/* Buttons */
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 0;
+    background-color: rgb(var(--bg-color));
+    border: none;
+    outline: none;
+    box-shadow: 0;
+    appearance: none;
+    border-radius: .25rem;
+    line-height: 1;
+    height: 2.5rem;
+    vertical-align: top;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    font-weight: bold;
+    overflow: hidden;
+    margin-bottom: .25rem;
+}
+
+.button:disabled {
+    opacity: .9;
+    cursor: not-allowed;
+}
+
+.button:not(:disabled):active {
+    filter:contrast(.9);
+}
+
+.button.block-button {
+    display: flex;
+}
+
+.button.is-outlined {
+    border: 1px solid rgb(var(--border-color));
+}
+
+.button.is-primary {
+    background-color: rgb(var(--primary-color));
+    color: rgb(var(--on-primary-color));
+}
+
+.button.is-secondary {
+    background-color: rgb(var(--secondary-color));
+    color: rgb(var(--on-secondary-color));
+}
+
+.button.error-button {
+    color: rgb(var(--error-color));
+}
+
+.button.is-large {
+    height: 3rem;
+}
+
+.icon-button {
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+}
+
+/* @MISC */
+
+.spinner {
+    display: inline-block;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #000000 #000000 #ffffff #ffffff;
+    border-radius: 50%;
+    animation: 300ms spin linear infinite;
+}
+  
+.spinner.small {
+    width: calc(1rem - 2px);
+    height: 1rem;
+}
+
+.spinner.medium {
+    width: 2rem;
+    height: 2rem;
+}
+
+.spinner.large {
+    width: 3rem;
+    height: 3rem;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* @Layout and Containers */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--container-padding);
+}
+
+.bar {
+    box-shadow: 0 .01em .01em .08em rgb(var(--border-color), .3);
+}
+
+.container {
+    padding: var(--container-padding);
+}
