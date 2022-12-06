@@ -9,6 +9,8 @@
     --on-secondary-color: 0, 0, 0;
     --error-color: 255, 0, 0;
     --on-error-color: 255, 255, 255;
+    --link-color: 0, 0, 240;
+    --link-hover-color: 0, 0, 255;
 }
 
 html {
@@ -33,6 +35,10 @@ svg:not([fill]) {
 
 a, a:hover {
     text-decoration: none;
+}
+
+a {
+    color: rgb(var(--link-color));
 }
 
 input, textarea {
