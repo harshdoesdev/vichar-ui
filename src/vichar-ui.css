@@ -143,9 +143,10 @@ h6 {
     padding: 1rem;
     margin: 0;
     background-color: var(--bg-color);
+    color: var(--color);
     border: none;
     outline: none;
-    box-shadow: 0;
+    box-shadow: none;
     appearance: none;
     border-radius: .25rem;
     line-height: 1;
@@ -197,10 +198,12 @@ h6 {
 }
 
 .icon-button {
-    justify-content: center;
-    align-items: center;
     width: 24px;
     height: 24px;
+}
+
+.icon-button svg {
+    flex-shrink: 0;
 }
 
 /* @MISC */
@@ -236,13 +239,6 @@ h6 {
 }
 
 /* @Layout and Containers */
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--container-padding);
-}
 
 .container {
     padding: var(--container-padding);
