@@ -1,16 +1,15 @@
 :root {
-    --bg-color: 255, 255, 255;
-    --color: 0, 0, 0;
+    --bg-color: rgb(255, 255, 255);
+    --color: rgb(0, 0, 0);
     --container-padding: 1rem;
-    --border-color: 163, 163, 163;
-    --primary-color: 0, 0, 0;
-    --on-primary-color: 255, 255, 255;
-    --secondary-color: 237, 237, 237;
-    --on-secondary-color: 0, 0, 0;
-    --error-color: 255, 0, 0;
-    --on-error-color: 255, 255, 255;
-    --link-color: 0, 0, 240;
-    --link-hover-color: 0, 0, 255;
+    --border-color: rgb(163, 163, 163);
+    --primary-color: rgb(0, 0, 0);
+    --on-primary-color: rgb(255, 255, 255);
+    --secondary-color: rgb(237, 237, 237);
+    --on-secondary-color: rgb(0, 0, 0);
+    --error-color: rgb(255, 0, 0);
+    --on-error-color: rgb(255, 255, 255);
+    --link-color: rgb(0, 0, 240);
 }
 
 html {
@@ -24,8 +23,8 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: rgb(var(--bg-color));
-    color: rgb(var(--color));
+    background-color: var(--bg-color);
+    color: var(--color);
     font-family: sans-serif;
 }
 
@@ -38,7 +37,7 @@ a, a:hover {
 }
 
 a {
-    color: rgb(var(--link-color));
+    color: var(--link-color);
 }
 
 input, textarea {
@@ -88,7 +87,7 @@ h6 {
 .input, .textarea, .select {
     background-color: var(--bg-color);
     padding: .8rem;
-    border: 1px solid rgb(var(--border-color));
+    border: 1px solid var(--border-color);
     border-radius: .25rem;
     outline: none;
     vertical-align: top;
@@ -97,7 +96,7 @@ h6 {
 }
 
 .input:focus, .textarea:focus, .select:focus {
-    border-color: rgb(var(--primary-color));
+    border-color: var(--primary-color);
 }
 
 .input {
@@ -117,12 +116,12 @@ h6 {
 }
 
 .select option:checked {
-    background-color: rgb(var(--primary-color));
-    color: rgb(var(--on-primary-color));
+    background-color: var(--primary-color);
+    color: var(--on-primary-color);
 }
 
 .select option:hover {
-    background-color: rgb(var(--secondary-color));
+    background-color: var(--secondary-color);
 }
 
 .label {
@@ -143,7 +142,7 @@ h6 {
     align-items: center;
     padding: 1rem;
     margin: 0;
-    background-color: rgb(var(--bg-color));
+    background-color: var(--bg-color);
     border: none;
     outline: none;
     box-shadow: 0;
@@ -175,22 +174,22 @@ h6 {
 }
 
 .button.is-outlined {
-    border: 1px solid rgb(var(--border-color));
-    color: rgb(var(--color));
+    border: 1px solid var(--border-color);
+    color: var(--color);
 }
 
 .button.is-primary {
-    background-color: rgb(var(--primary-color));
-    color: rgb(var(--on-primary-color));
+    background-color: var(--primary-color);
+    color: var(--on-primary-color);
 }
 
 .button.is-secondary {
-    background-color: rgb(var(--secondary-color));
-    color: rgb(var(--on-secondary-color));
+    background-color: var(--secondary-color);
+    color: var(--on-secondary-color);
 }
 
 .button.error-button {
-    color: rgb(var(--error-color));
+    color: var(--error-color);
 }
 
 .button.is-large {
@@ -243,10 +242,6 @@ h6 {
     justify-content: space-between;
     align-items: center;
     padding: var(--container-padding);
-}
-
-.bar {
-    box-shadow: 0 .01em .01em .08em rgb(var(--border-color), .3);
 }
 
 .container {
